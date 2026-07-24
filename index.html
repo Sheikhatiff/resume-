@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muhammad Atif Sheikh — Software Engineer</title>
+<meta name="description" content="Muhammad Atif Sheikh — Full Stack Software Engineer. MERN, Node.js, AI/ML.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ambient layers -->
+  <canvas id="rain" aria-hidden="true"></canvas>
+  <div class="vignette" aria-hidden="true"></div>
+  <div class="crt-overlay" aria-hidden="true"></div>
+
+  <!-- boot sequence -->
+  <div id="boot" aria-hidden="true">
+    <div class="line" style="animation-delay:.05s">Sheikh-OS v3.33 booting from /dev/experience&hellip;</div>
+    <div class="line" style="animation-delay:.25s"><span class="dim">[ </span><span class="ok">OK</span><span class="dim"> ]</span> Mounting filesystem /home/atif</div>
+    <div class="line" style="animation-delay:.45s"><span class="dim">[ </span><span class="ok">OK</span><span class="dim"> ]</span> Loading modules: mern, mongodb, sklearn, tensorflow</div>
+    <div class="line" style="animation-delay:.65s"><span class="dim">[ </span><span class="ok">OK</span><span class="dim"> ]</span> Starting service: portfolio.service</div>
+    <div class="line" style="animation-delay:.9s"><span class="dim">[ </span><span class="ok">OK</span><span class="dim"> ]</span> Authenticating user &hellip; <span class="ok">access granted</span></div>
+    <div class="line" style="animation-delay:1.15s">atif@karachi:~$ <span class="cursor-line"></span></div>
+  </div>
+
+  <!-- nav / live terminal command bar -->
+  <header id="navbar">
+    <div class="nav-inner">
+      <div class="nav-brand">atif<span class="caret">@</span>sheikh<span class="caret">:~$</span></div>
+      <form class="term-form" id="term-form" role="search" aria-label="Site command navigation">
+        <label for="term-input">&gt;</label>
+        <input id="term-input" type="text" placeholder="type 'help' to navigate&hellip;" autocomplete="off" spellcheck="false">
+      </form>
+      <nav class="nav-links" aria-label="Sections">
+        <a href="#about">about</a>
+        <a href="#skills">skills</a>
+        <a href="#experience">experience</a>
+        <a href="#projects">projects</a>
+        <a href="#education">education</a>
+        <a href="#contact">contact</a>
+      </nav>
+    </div>
+    <div id="term-output" aria-live="polite"></div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section id="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-eyebrow"><span class="cmd">$</span> whoami</div>
+        <h1 class="name">Muhammad Atif Sheikh</h1>
+        <div class="role-line">Full Stack &amp; AI Software Engineer<span class="blink-cursor"></span></div>
+        <p class="hero-summary">
+          I build reliable, scalable web systems end to end — MERN applications, secure
+          authentication layers, and the occasional machine-learning model that actually
+          ships. Based in Karachi, working across the stack, allergic to sloppy code.
+        </p>
+        <div class="hero-meta">
+          <span><span class="key">location</span> Karachi, Pakistan</span>
+          <a href="mailto:atif55sheikh@gmail.com"><span class="key">mail</span> atif55sheikh@gmail.com</a>
+          <a href="tel:+923163094030"><span class="key">tel</span> +92 316 3094030</a>
+          <a href="https://github.com/Sheikhatiff" target="_blank" rel="noopener"><span class="key">git</span> github.com/Sheikhatiff</a>
+          <a href="https://linkedin.com/in/sheikh-atiff" target="_blank" rel="noopener"><span class="key">in</span> linkedin.com/in/sheikh-atiff</a>
+        </div>
+        <div class="hero-cta">
+          <a class="btn primary" href="#projects">./view_projects.sh</a>
+          <a class="btn" href="#contact">$ ssh contact</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="wrap">
+        <div class="eyebrow"><span class="cmd">$</span> cat about.md</div>
+        <h2 class="section-title"><span class="hash">01 /</span> About</h2>
+        <div class="about-body reveal">
+          <p>
+            <strong>Full stack engineer</strong> with hands-on experience building web applications
+            and backend systems, currently finishing a BSc in Computer Science at
+            <strong>COMSATS University Islamabad</strong> (CGPA 3.33/4.0). I care about clean,
+            efficient code and solutions that hold up under real usage, not just in a demo.
+          </p>
+          <p>
+            Comfortable in Agile teams, quick to pick up new tools, and equally at home writing
+            an Express API, tuning a MongoDB query, or training a classifier. I like problems
+            that sit at the intersection of backend engineering and applied ML.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="wrap">
+        <div class="eyebrow"><span class="cmd">$</span> ls skills/</div>
+        <h2 class="section-title"><span class="hash">02 /</span> Skills</h2>
+        <div class="skills-grid reveal">
+
+          <div class="skill-card">
+            <div class="file-name"><span>~/skills/</span>languages.txt</div>
+            <div class="tag-row">
+              <span class="tag">javascript-es6</span>
+              <span class="tag">python</span>
+              <span class="tag">java</span>
+              <span class="tag">c</span>
+              <span class="tag">csharp</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="file-name"><span>~/skills/</span>stack.txt</div>
+            <div class="tag-row">
+              <span class="tag">node.js</span>
+              <span class="tag">express.js</span>
+              <span class="tag">react.js</span>
+              <span class="tag">rest-apis</span>
+              <span class="tag">jwt-auth</span>
+              <span class="tag">socket.io</span>
+              <span class="tag">websockets</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="file-name"><span>~/skills/</span>databases.txt</div>
+            <div class="tag-row">
+              <span class="tag">mongodb</span>
+              <span class="tag">mongoose</span>
+              <span class="tag">mysql</span>
+              <span class="tag">schema-design</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="file-name"><span>~/skills/</span>devops-tools.txt</div>
+            <div class="tag-row">
+              <span class="tag">git</span>
+              <span class="tag">github</span>
+              <span class="tag">docker</span>
+              <span class="tag">ci-cd-basics</span>
+              <span class="tag">postman</span>
+              <span class="tag">npm</span>
+              <span class="tag">sonarqube</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="file-name"><span>~/skills/</span>ai-ml.txt</div>
+            <div class="tag-row">
+              <span class="tag">scikit-learn</span>
+              <span class="tag">tensorflow</span>
+              <span class="tag">pandas</span>
+              <span class="tag">numpy</span>
+              <span class="tag">nlp</span>
+              <span class="tag">classification</span>
+              <span class="tag">regression</span>
+              <span class="tag">eda</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="file-name"><span>~/skills/</span>core.txt</div>
+            <div class="tag-row">
+              <span class="tag">dsa</span>
+              <span class="tag">oop</span>
+              <span class="tag">api-design</span>
+              <span class="tag">agile</span>
+              <span class="tag">testing</span>
+              <span class="tag">time-management</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <div class="wrap">
+        <div class="eyebrow"><span class="cmd">$</span> git log --oneline --graph</div>
+        <h2 class="section-title"><span class="hash">03 /</span> Experience</h2>
+
+        <div class="reveal">
+          <div class="commit">
+            <div class="commit-rail"><div class="commit-dot"></div></div>
+            <div class="commit-body">
+              <div class="commit-meta"><span class="commit-hash">#a4f21c9</span>Author: Muhammad Atif Sheikh</div>
+              <div class="commit-subject">MERN Stack Development Intern <span class="at">@</span> <span class="company">10Pearls</span></div>
+              <div class="commit-date">Sep 2025 — Nov 2025</div>
+              <div class="commit-msg">
+                Built production-grade MERN applications with JWT authentication and
+                AES-256 encryption; optimized MongoDB queries to improve API response
+                times by 30%.
+              </div>
+            </div>
+          </div>
+
+          <div class="commit">
+            <div class="commit-rail"><div class="commit-dot"></div></div>
+            <div class="commit-body">
+              <div class="commit-meta"><span class="commit-hash">#7b19e0d</span>Author: Muhammad Atif Sheikh</div>
+              <div class="commit-subject">Backend Development Intern <span class="at">@</span> <span class="company">Elite Tech</span></div>
+              <div class="commit-date">Aug 2025 — Sep 2025</div>
+              <div class="commit-msg">
+                Architected secure authentication systems using Node.js and MongoDB
+                with JWT refresh tokens and bcrypt hashing to prevent unauthorized access.
+              </div>
+            </div>
+          </div>
+
+          <div class="commit">
+            <div class="commit-rail"><div class="commit-dot"></div></div>
+            <div class="commit-body">
+              <div class="commit-meta"><span class="commit-hash">#2d8c4a1</span>Author: Muhammad Atif Sheikh</div>
+              <div class="commit-subject">Artificial Intelligence Intern <span class="at">@</span> <span class="company">Pace Tech</span></div>
+              <div class="commit-date">Jul 2025 — Aug 2025</div>
+              <div class="commit-msg">
+                Developed supervised and unsupervised ML models using Scikit-learn,
+                achieving 85%+ accuracy through feature engineering, hyperparameter
+                tuning, and EDA with Pandas and NumPy.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="wrap">
+        <div class="eyebrow"><span class="cmd">$</span> ls -la ~/projects</div>
+        <h2 class="section-title"><span class="hash">04 /</span> Projects</h2>
+
+        <div class="reveal">
+          <div class="ls-header">
+            <span>perms</span><span>size</span><span>name</span>
+          </div>
+
+          <div class="project-row">
+            <details>
+              <summary class="project-summary">
+                <span class="perm">drwxr-xr-x</span>
+                <span class="size">4.2k</span>
+                <span class="proj-name"><span class="arrow">&#9656;</span>early-mental-health-warning-system/</span>
+              </summary>
+              <div class="project-detail">
+                <p>Final Year Project. Fine-tuned a BERT transformer for multi-label emotion
+                classification across 28 categories, paired with real-time WebSocket alerts
+                and automated deviation detection via scheduled Agenda.js jobs. Full-stack
+                delivery: React 19 frontend, Node.js/Express backend, Flask ML microservice,
+                and an admin dashboard for user and alert management.</p>
+                <div class="stack-row">
+                  <span class="tag">mern</span><span class="tag">flask</span><span class="tag">bert</span>
+                  <span class="tag">socket.io</span><span class="tag">agenda.js</span><span class="tag">nodemailer</span>
+                </div>
+              </div>
+            </details>
+          </div>
+
+          <div class="project-row">
+            <details>
+              <summary class="project-summary">
+                <span class="perm">drwxr-xr-x</span>
+                <span class="size">2.8k</span>
+                <span class="proj-name"><span class="arrow">&#9656;</span>vibe-notes/</span>
+              </summary>
+              <div class="project-detail">
+                <p>LAN-based note and file-sharing system with IP-based network isolation
+                and map-based location tagging via Leaflet.js. Encrypted file transport
+                using AES-256-CBC, with Redux Toolkit managing client state and JWT
+                securing access.</p>
+                <div class="stack-row">
+                  <span class="tag">mern</span><span class="tag">lan</span><span class="tag">leaflet.js</span>
+                  <span class="tag">redux-toolkit</span><span class="tag">jwt</span><span class="tag">multer</span>
+                  <span class="tag">aes-256-cbc</span>
+                </div>
+              </div>
+            </details>
+          </div>
+
+          <div class="project-row">
+            <details>
+              <summary class="project-summary">
+                <span class="perm">-rw-r--r--</span>
+                <span class="size">1.1k</span>
+                <span class="proj-name"><span class="arrow">&#9656;</span>chattify-backend/</span>
+              </summary>
+              <div class="project-detail">
+                <p>Backend service for a real-time chat application, handling authentication,
+                message routing, and data persistence.</p>
+                <div class="stack-row">
+                  <span class="tag">node.js</span><span class="tag">express.js</span>
+                  <span class="tag">mongodb</span><span class="tag">jwt</span>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION + CERTS -->
+    <section id="education">
+      <div class="wrap">
+        <div class="eyebrow"><span class="cmd">$</span> cat education.log certifications.log</div>
+        <h2 class="section-title"><span class="hash">05 /</span> Education &amp; Certifications</h2>
+
+        <div class="edu-grid reveal">
+          <div class="kv-block">
+            <p class="kv-title">BSc Computer Science</p>
+            <p class="kv-sub">COMSATS University Islamabad</p>
+            <div class="kv-row"><span class="k">duration</span><span class="v">Mar 2022 — Mar 2026</span></div>
+            <div class="kv-row"><span class="k">cgpa</span><span class="v">3.33 / 4.0</span></div>
+            <div class="kv-row"><span class="k">languages</span><span class="v">English, Urdu (native)</span></div>
+          </div>
+
+          <div class="kv-block">
+            <p class="kv-title">Certifications</p>
+            <p class="kv-sub">Udemy — Jonas Schmedtmann</p>
+            <ul class="cert-list">
+              <li>Machine Learning &amp; JavaScript</li>
+              <li>Node.js — The Complete Guide</li>
+              <li>React.js — The Complete Guide</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="wrap">
+        <div class="eyebrow"><span class="cmd">$</span> ssh atif@karachi.pk</div>
+        <h2 class="section-title"><span class="hash">06 /</span> Contact</h2>
+
+        <div class="window reveal">
+          <div class="window-bar">
+            <span class="dot red"></span><span class="dot amber"></span><span class="dot green"></span>
+            <span class="window-title">atif@karachi.pk — ssh session</span>
+          </div>
+          <div class="ssh-block">
+            <p class="ssh-line">Last login: today from your browser</p>
+            <p class="ssh-line"><span class="ok">Connection established.</span> Open channels below —</p>
+            <div class="contact-list">
+              <a href="mailto:atif55sheikh@gmail.com"><span class="label">email</span><span>atif55sheikh@gmail.com</span></a>
+              <a href="tel:+923163094030"><span class="label">phone</span><span>+92 316 3094030</span></a>
+              <a href="https://github.com/Sheikhatiff" target="_blank" rel="noopener"><span class="label">github</span><span>github.com/Sheikhatiff</span></a>
+              <a href="https://linkedin.com/in/sheikh-atiff" target="_blank" rel="noopener"><span class="label">linkedin</span><span>linkedin.com/in/sheikh-atiff</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="statusbar">
+      <span><span class="pulse"></span>system online — open to opportunities</span>
+      <span id="clock-status">Karachi, PK</span>
+      <span>build: portfolio@1.0.0</span>
+    </div>
+  </footer>
+
+<script>
+(function(){
+  "use strict";
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- boot sequence (once per browser session) ---------- */
+  var boot = document.getElementById('boot');
+  if (sessionStorage.getItem('booted') || reduceMotion) {
+    boot.classList.add('hidden');
+  } else {
+    sessionStorage.setItem('booted', '1');
+    setTimeout(function(){ boot.classList.add('hidden'); }, 1650);
+  }
+
+  /* ---------- scroll reveal ---------- */
+  var revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window && !reduceMotion) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.15 });
+    revealEls.forEach(function(el){ io.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('in'); });
+  }
+
+  /* ---------- interactive terminal nav ---------- */
+  var form = document.getElementById('term-form');
+  var input = document.getElementById('term-input');
+  var output = document.getElementById('term-output');
+
+  var routes = {
+    about: '#about', skills: '#skills', experience: '#experience',
+    work: '#experience', projects: '#projects', education: '#education',
+    contact: '#contact', home: '#hero', top: '#hero'
+  };
+
+  function printLine(text, cls){
+    var p = document.createElement('div');
+    p.className = 'line' + (cls ? ' ' + cls : '');
+    p.textContent = text;
+    output.appendChild(p);
+    while (output.children.length > 4) { output.removeChild(output.firstChild); }
+  }
+
+  function handleCommand(raw){
+    var cmd = raw.trim().toLowerCase();
+    if (!cmd) return;
+    printLine('$ ' + raw);
+
+    if (cmd === 'help') {
+      printLine('available: about, skills, experience, projects, education, contact, clear, sudo hire-me');
+      return;
+    }
+    if (cmd === 'clear') {
+      output.innerHTML = '';
+      return;
+    }
+    if (cmd === 'sudo hire-me' || cmd === 'sudo hire me') {
+      printLine("permission granted. redirecting to contact\u2026", 'ok');
+      window.location.hash = '#contact';
+      return;
+    }
+    if (routes[cmd]) {
+      window.location.hash = routes[cmd];
+      printLine('navigating to ' + routes[cmd].replace('#',''), 'ok');
+      return;
+    }
+    printLine("command not found: '" + raw + "' — try 'help'", 'err');
+  }
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    handleCommand(input.value);
+    input.value = '';
+  });
+
+  /* ---------- matrix rain canvas ---------- */
+  var canvas = document.getElementById('rain');
+  var ctx = canvas.getContext('2d');
+  var w, h, cols, drops;
+  var chars = 'アイウエオカキクケコ01アトフシークABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+  function resize(){
+    w = canvas.width = window.innerWidth;
+    h = canvas.height = window.innerHeight;
+    cols = Math.floor(w / 16);
+    drops = new Array(cols).fill(1);
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  function draw(){
+    ctx.fillStyle = 'rgba(7,11,9,0.06)';
+    ctx.fillRect(0, 0, w, h);
+    ctx.fillStyle = '#3ddc84';
+    ctx.font = '14px monospace';
+    for (var i = 0; i < drops.length; i++) {
+      var text = chars[Math.floor(Math.random() * chars.length)];
+      ctx.fillText(text, i * 16, drops[i] * 16);
+      if (drops[i] * 16 > h && Math.random() > 0.975) drops[i] = 0;
+      drops[i]++;
+    }
+  }
+
+  if (!reduceMotion) {
+    setInterval(draw, 55);
+  } else {
+    canvas.style.display = 'none';
+  }
+})();
+</script>
+</body>
+</html>
